@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Team Project | August 2023 to June 2024</title>
+<meta name="generator" content="Jekyll v3.9.3" />
+<meta property="og:title" content="Team Project" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="August 2023 to June 2024" />
+<meta property="og:description" content="August 2023 to June 2024" />
+<link rel="canonical" href="http://localhost:4100/Team-Project/game/" />
+<meta property="og:url" content="http://localhost:4100/Team-Project/game/" />
+<meta property="og:site_name" content="Team Project" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Team Project" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"August 2023 to June 2024","headline":"Team Project","url":"http://localhost:4100/Team-Project/game/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Team-Project/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/Team-Project/feed.xml" title="Team Project" /><link rel="shortcut icon" type="image/x-icon" href="/Team-Project/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Team-Project/">Team Project</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Team-Project/AC_csse.html">CSSE</a><a class="page-link" href="/Team-Project/AD_compsci.html">Computer Science Lab Notebook</a><a class="page-link" href="/Team-Project/about/">About Me</a><a class="page-link" href="/Team-Project/search/">Search</a><a class="page-link" href="/Team-Project/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+  </header>
+
+  <div class="post-content">
+    <style>
+    #canvas {
+        margin: 0;
+        border: 1px solid white;
+    }
+</style>
+
+<canvas id="canvas"></canvas>
+
+<script>
+    
+    let canvas = document.getElementById('canvas');
+    let c = canvas.getContext('2d');
+    canvas.width = 1500;
+    canvas.height = 400;
+    let gravity = 1.5;
+
+    let playerImage = new Image();
+    playerImage.src = '/Team-Project/images/amazonBOX.png';
+
+    class Player {
+        constructor() {
+            this.position = {
+                x: 100,
+                y: 200
+            };
+            this.velocity = {
+                x: -10,
+                y: 0
+            };
+            this.width = 50;
+            this.height = 30;
+            this.image = playerImage;
+        }
+        draw() {
+            c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+        }
+        update() {
+            this.draw();
+            this.position.y += this.velocity.y;
+            this.position.x += this.velocity.x;
+            if (this.position.y + this.height + this.velocity.y <= canvas.height)
+                this.velocity.y += gravity;
+            else
+                this.velocity.y = 0;
+        }
+    }
+
+    class Platform {
+        constructor(image) {
+            this.position = {
+                x: 0,
+                y: 310
+            }
+            this.image = image;
+            this.width = 1500;
+            this.height = 300;
+        }
+        draw() {
+            c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+        }
+    }
+
+    class Tube {
+        constructor(image) {
+            this.position = {
+                x: 1200,
+                y: 190
+            }
+            this.image = image;
+            this.width = 100;
+            this.height = 120;
+        }
+        draw() {
+            c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+        }
+    }
+
+    class BlockObject {
+        constructor(image) {
+            this.position = {
+                x: 200,
+                y: 50
+            };
+            this.image = image;
+            this.width = 300;
+            this.height = 160;
+        }
+        draw() {
+            c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+        }
+    }
+
+    class Goomba {
+        constructor(image) {
+            this.position = {
+                x: 250,
+                y: 260
+            };
+            this.image = image;
+            this.width = 55;
+            this.height = 55;
+            this.velocity = {
+                x: -2,
+                y: 0
+            }
+        }
+        draw() {
+            c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+        }
+        update() {
+            this.position.x += this.velocity.x;
+            this.draw();
+        }
+    }
+
+    let image = new Image()
+    let imageTube = new Image()
+    let imageBlock = new Image()
+    image.src = '/Team-Project/images/other_road.png'
+    imageTube.src = '/Team-Project/images/house.png'
+    imageBlock.src = '/Team-Project/images/Cloud.png';
+    let imageGoomba = new Image()
+    imageGoomba.src = '/Team-Project/images/Uno-Stalker.png';
+    let platform = new Platform(image)
+    let tube = new Tube(imageTube)
+    let blockObject = new BlockObject(imageBlock)
+    let goomba = new Goomba(imageGoomba)
+    player = new Player()
+    let keys = {
+        right: {
+            pressed: false
+        },
+        left: {
+            pressed: false
+        }
+    }
+
+    class GenericObject {
+        constructor({ x, y, image }) {
+            this.position = {
+                x,
+                y
+            };
+            this.image = image;
+            this.width = 1500; // Adjust the width to fit your canvas
+            this.height = 400; // Adjust the height to fit your canvas
+        }
+
+        draw() {
+            c.drawImage(this.image, this.position.x, this.position.y, this.width, this.height);
+        }
+    }
+
+    let imageBackground = new Image();
+    imageBackground.src = '/Team-Project/images/Background-With-Road-6.1.png';
+
+    let background = new GenericObject({
+        x: 0,
+        y: 0,
+        image: imageBackground
+    });
+
+    let genericObjects = [background];
+
+    function animate() {
+        requestAnimationFrame(animate);
+        c.clearRect(0, 0, canvas.width, canvas.height);
+
+        genericObjects.forEach(genericObject => {
+            genericObject.draw()
+        });
+
+        platform.draw();
+        player.update();
+        tube.draw();
+        blockObject.draw();
+
+        goomba.update();
+        if (
+            player.position.y + player.height <= blockObject.position.y + 50 && // Add desired value to lower the player
+            player.position.y + player.height + player.velocity.y >= blockObject.position.y &&
+            player.position.x + player.width >= blockObject.position.x + 50 && // Add desired value to shorten the collision width
+            player.position.x <= blockObject.position.x + blockObject.width - 50 // Subtract desired value to shorten the collision width
+        )
+        {
+            player.velocity.y = 0;
+            player.position.y = blockObject.position.y - player.height + 50; // Adjust the player's position
+        }
+
+        if (keys.right.pressed && player.position.x + player.width <= canvas.width - 50) {
+            player.velocity.x = 15;
+        } else if (keys.left.pressed && player.position.x >= 50) {
+            player.velocity.x = -15;
+        } else {
+            player.velocity.x = 0;
+        }
+
+        if (
+                player.position.y + player.height <= platform.position.y &&
+                player.position.y + player.height + player.velocity.y >= platform.position.y &&
+                player.position.x + player.width >= platform.position.x &&
+                player.position.x <= platform.position.x + platform.width
+            )
+            {
+                player.velocity.y = 0;
+            }
+
+        if (
+                player.position.y + player.height <= tube.position.y &&
+                player.position.y + player.height + player.velocity.y >= tube.position.y &&
+                player.position.x + player.width >= tube.position.x &&
+                player.position.x <= tube.position.x + tube.width
+            ) {
+                player.velocity.y = 0;
+                player.position.y += 0.1
+                player.velocity.y = 0.0001
+                gravity = 0.2
+            }
+
+            if (player.position.y + player.height == tube.position.y + tube.height ||
+                    player.position.y + player.height <= tube.position.y ||
+                    player.position.x + player.width <= tube.position.x ||
+                    player.position.x >= tube.position.x + tube.width) {
+                        gravity = 1.5
+                    }
+
+        if (
+                player.position.x + player.width<= tube.position.x &&
+                player.position.x + player.width + player.velocity.x >= tube.position.x &&
+                player.position.y + player.height >= tube.position.y &&
+                player.position.y <= tube.position.y + tube.height
+            )
+            {
+                player.velocity.x = 0;
+            }
+
+        if (
+                player.position.x >= tube.position.x + tube.width &&
+                player.position.x + player.velocity.x <= tube.position.x + tube.width &&
+                player.position.y + player.height >= tube.position.y &&
+                player.position.y <= tube.position.y + tube.height
+            )
+            {
+                player.velocity.x = 0;
+            }
+
+        if (
+                player.position.x >= tube.position.x &&
+                player.position.x + player.velocity.x <= tube.position.x &&
+                player.position.y + player.height >= tube.position.y &&
+                player.position.y <= tube.position.y + tube.height
+            )
+            {
+                player.velocity.x = 0;
+            }
+
+        if (
+                player.position.x + player.width <= tube.position.x + tube.width &&
+                player.position.x + player.width + player.velocity.x >= tube.position.x + tube.width &&
+                player.position.y + player.height >= tube.position.y &&
+                player.position.y <= tube.position.y + tube.height
+            )
+            {
+                player.velocity.x = 0;
+            }
+
+        if(
+            player.position.y + player.height <= goomba.position.y &&
+            player.position.y + player.height + player.velocity.y >= goomba.position.y &&
+            player.position.x + player.width >= goomba.position.x &&
+            player.position.x <= goomba.position.x + goomba.width
+        )
+        {
+            player.velocity.y = -20;
+        }
+
+        if (
+            player.position.x < goomba.position.x + goomba.width &&
+            player.position.x + player.width > goomba.position.x &&
+            player.position.y < goomba.position.y + goomba.height &&
+            player.position.y + player.height > goomba.position.y
+        ) {
+            // Player collided with goomba, refresh the page
+            location.reload();
+        }
+
+        if (
+            goomba.position.x >= platform.position.x &&
+            goomba.position.x <= platform.position.x
+        )
+        {
+            goomba.velocity.x = 2;
+        }
+
+        if (
+            goomba.position.x + goomba.width <= tube.position.x &&
+            goomba.position.x + goomba.width + goomba.velocity.x >= tube.position.x
+        )
+        {
+            goomba.velocity.x = -2;
+        }
+    }
+
+    animate();
+
+    addEventListener('keydown', ({ keyCode }) => {
+        switch (keyCode) {
+            case 65:
+                keys.left.pressed = true;
+                break;
+            case 68:
+                keys.right.pressed = true;
+                break;
+            case 87:
+                player.velocity.y -= 20;
+                break;
+        }
+    });
+
+    addEventListener('keyup', ({ keyCode }) => {
+        switch (keyCode) {
+            case 65:
+                keys.left.pressed = false;
+                break;
+            case 68:
+                keys.right.pressed = false;
+                break;
+            case 87:
+                player.velocity.y = -20;
+                break;
+        }
+    })
+</script>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Team-Project/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="http://localhost:4100/Team-Project/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Team-Project/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>August 2023 to June 2024</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="https://github.com/ryann96/Team-Project" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/Team-Project/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
