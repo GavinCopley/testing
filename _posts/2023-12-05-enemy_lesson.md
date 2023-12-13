@@ -36,7 +36,7 @@ export class Enemy extends Character {
 
         // Player Data is required for Animations
         this.enemyData = enemyData;
-    }
+    .
 }
 
 export default Enemy

@@ -34,8 +34,17 @@ export class Thing1 extends GameObject {
         const scaledHeight = this.image.height * 0.169;
 
         // Center the object on the screen
-        const thingX = (GameEnv.innerWidth - scaledWidth) / 7.5;
-        const thingY = (GameEnv.innerHeight - scaledHeight) / 2;
+        const randomPosition = Math.random() < 0.5; // Randomly choose between two positions
+
+        let thingX, thingY;
+
+        if (randomPosition) {
+            thingX = (GameEnv.innerWidth - scaledWidth) / 2.5;
+            thingY = (GameEnv.innerHeight - scaledHeight) / 2.99;
+        } else {
+            thingX = (GameEnv.innerWidth - scaledWidth) / 7.5;
+            thingY = (GameEnv.innerHeight - scaledHeight) / 2.12;
+        }
 
         // Set variables used in Display and Collision algorithms
         this.bottom = thingY + scaledHeight;
@@ -48,6 +57,9 @@ export class Thing1 extends GameObject {
         this.canvas.style.left = `${thingX}px`;
         this.canvas.style.top = `${thingY}px`;
     }
-}
+
+   
+    }
 
 export default Thing1;
+

@@ -9,7 +9,7 @@ author: Gavin Copley, Zafeer Ahmed, Ryan Nguyen
 
 <a href="https://ryann96.github.io/Team-Project/mariogame">Mario Platforms</a>
 
-# Using OOP
+### Using OOP
 - We use Object Orientated Programming to complete this task. OOP uses objects, classes, variables, and includes a plethora of other items to create, in this case, a developed and fully functional javascript game! Follow along as we go through the steps to make 3 of the following additions: A platform, a coin, and a scoreboard.
 
 ## Making A Platform
@@ -64,7 +64,9 @@ export class PlatformO extends GameObject {
 export default PlatformO;
 ```
 
-
+### Constructor and Super
+- Constructor is used to initialize an object and to set it's values
+- Super is used to inherit traits from a parent object.
 
 - Most of the values are changeable; we can change the position, size, and so on for the platform. Be sure to experiment!
 
