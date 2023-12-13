@@ -10,19 +10,19 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Early steps in adding levels to an OOP Game. This includes basic animations left-right-jump, multiple background, and simple callback to terminate each level." />
 <meta property="og:description" content="Early steps in adding levels to an OOP Game. This includes basic animations left-right-jump, multiple background, and simple callback to terminate each level." />
-<link rel="canonical" href="http://localhost:4100/trimester2/mariogame" />
-<meta property="og:url" content="http://localhost:4100/trimester2/mariogame" />
+<link rel="canonical" href="http://localhost:4100/testing/mariogame" />
+<meta property="og:url" content="http://localhost:4100/testing/mariogame" />
 <meta property="og:site_name" content="Team Project" />
-<meta property="og:image" content="http://localhost:4100/trimester2/images/platformer/backgrounds/hills.png" />
+<meta property="og:image" content="http://localhost:4100/testing/images/platformer/backgrounds/hills.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-11-27T00:00:00+00:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4100/trimester2/images/platformer/backgrounds/hills.png" />
+<meta property="twitter:image" content="http://localhost:4100/testing/images/platformer/backgrounds/hills.png" />
 <meta property="twitter:title" content="Dynamic Game Levels" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-27T00:00:00+00:00","datePublished":"2023-11-27T00:00:00+00:00","description":"Early steps in adding levels to an OOP Game. This includes basic animations left-right-jump, multiple background, and simple callback to terminate each level.","headline":"Dynamic Game Levels","image":"http://localhost:4100/trimester2/images/platformer/backgrounds/hills.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/trimester2/mariogame"},"url":"http://localhost:4100/trimester2/mariogame"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-27T00:00:00+00:00","datePublished":"2023-11-27T00:00:00+00:00","description":"Early steps in adding levels to an OOP Game. This includes basic animations left-right-jump, multiple background, and simple callback to terminate each level.","headline":"Dynamic Game Levels","image":"http://localhost:4100/testing/images/platformer/backgrounds/hills.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4100/testing/mariogame"},"url":"http://localhost:4100/testing/mariogame"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/trimester2/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/trimester2/feed.xml" title="Team Project" /><link rel="shortcut icon" type="image/x-icon" href="/trimester2/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="/testing/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4100/testing/feed.xml" title="Team Project" /><link rel="shortcut icon" type="image/x-icon" href="/testing/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
 <script>
@@ -57,7 +57,7 @@ window.onload = wrap_img;
 </head>
 <body><header class="site-header">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/trimester2/">Team Project</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/testing/">Team Project</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -67,21 +67,46 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/trimester2/AC_csse.html">CSSE</a><a class="page-link" href="/trimester2/AD_compsci.html">Computer Science Lab Notebook</a><a class="page-link" href="/trimester2/about/">About Me</a><a class="page-link" href="/trimester2/search/">Search</a><a class="page-link" href="/trimester2/categories/">Tags</a></div>
+        <div class="trigger"><a class="page-link" href="/testing/AC_csse.html">CSSE</a><a class="page-link" href="/testing/AD_compsci.html">Computer Science Lab Notebook</a><a class="page-link" href="/testing/about/">About Me</a><a class="page-link" href="/testing/search/">Search</a><a class="page-link" href="/testing/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <style>
-    #gameBegin, #controls, #gameOver {
-        position: relative;
-        z-index: 2; /*Ensure the controls are on top*/
+  #gameBegin, #controls, #gameOver {
+    position: relative;
+    z-index: 2; /*Ensure the controls are on top*/
+  }
+  
+  #toggleCanvasEffect, #background, #platform {
+    animation: fadein 5s;
+  }
+
+  #startGame {
+    animation: flash 0.5s infinite;
+  }
+
+  @keyframes flash {
+    50% {
+      opacity: 0;
     }
+  }
+
+  @keyframes fadeout {
+    from {opacity: 1}
+    to {opacity: 0}
+  }
+
+  @keyframes fadein {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
 </style>
 
 <!-- Prepare DOM elements -->
 <!-- Wrap both the canvas and controls in a container div -->
 <div id="canvasContainer">
+    <div id="score"></div>
     <div id="gameBegin" hidden="">
         <button id="startGame">Start Game</button>
     </div>
@@ -96,9 +121,9 @@ window.onload = wrap_img;
 
 <script type="module">
     // Imports
-    import GameEnv from '/trimester2/assets/js/platformer/GameEnv.js';
-    import GameLevel from '/trimester2/assets/js/platformer/GameLevel.js';
-    import GameControl from '/trimester2/assets/js/platformer/GameControl.js';
+    import GameEnv from '/testing/assets/js/platformer/GameEnv.js';
+    import GameLevel from '/testing/assets/js/platformer/GameLevel.js';
+    import GameControl from '/testing/assets/js/platformer/GameControl.js';
     
 
 
@@ -108,65 +133,65 @@ window.onload = wrap_img;
     */
 
     // Define assets for the game
-    var assets = {
-      obstacles: {
-        tube: { src: "/images/platformer/obstacles/tube.png" },
-      },
-      platforms: {
-        grass: { src: "/images/platformer/platforms/grass.png" },
-        alien: { src: "/images/platformer/platforms/alien.png" }
-      },
-      thing: {
-        coin: { src: "/images/Coin.png" }
-      },  
-      platformO: {
-        grass: { src: "/images/brick_wall.png" },
-        alien: { src: "/images/platformer/platforms/alien.png" }
-      },
-      enemies: {
-        goomba:
-          src: "/images/platformer/sprites/goomba.png",
-          width: 448,
-          height: 452,
-      },
-      }
-      backgrounds: {
-        start: { src: "/images/platformer/backgrounds/home.png" },
-        hills: { src: "/images/platformer/backgrounds/hills.png" },
-        planet: { src: "/images/platformer/backgrounds/planet.jpg" },
-        castles: { src: "/images/platformer/backgrounds/castles.png" },
-        end: { src: "/images/platformer/backgrounds/game_over.png" }
-      },
-      players: {
-        mario: {
-          src: "/images/platformer/sprites/mario.png",
-          width: 256,
-          height: 256,
-          w: { row: 10, frames: 15 },
-          wa: { row: 11, frames: 15 },
-          wd: { row: 10, frames: 15 },
-          a: { row: 3, frames: 7, idleFrame: { column: 7, frames: 0 } },
-          s: {  },
-          d: { row: 2, frames: 7, idleFrame: { column: 7, frames: 0 } }
-        },
-        monkey: {
-          src: "/images/platformer/sprites/monkey.png",
-          width: 40,
-          height: 40,
-          w: { row: 9, frames: 15 },
-          wa: { row: 9, frames: 15 },
-          wd: { row: 9, frames: 15 },
-          a: { row: 1, frames: 15, idleFrame: { column: 7, frames: 0 } },
-          s: { row: 12, frames: 15 },
-          d: { row: 0, frames: 15, idleFrame: { column: 7, frames: 0 } }
-        }
-      }
-    };
+  var assets = {
+  obstacles: {
+    tube: { src: "/images/platformer/obstacles/tube.png" },
+  },
+  platforms: {
+    grass: { src: "/images/platformer/platforms/grass.png" },
+    alien: { src: "/images/platformer/platforms/alien.png" }
+  },
+  thing: {
+    coin: { src: "/images/Coin.png" }
+  },  
+  platformO: {
+    grass: { src: "/images/brick_wall.png" },
+  },
+  backgrounds: {
+    start: { src: "/images/platformer/backgrounds/home.png" },
+    hills: { src: "/images/platformer/backgrounds/hills.png" },
+    mountains: { src: "/images/platformer/backgrounds/mountains.jpg"},
+    planet: { src: "/images/platformer/backgrounds/planet.jpg" },
+    castles: { src: "/images/platformer/backgrounds/castles.png" },
+    end: { src: "/images/platformer/backgrounds/game_over.png" }
+  },
+  players: {
+    mario: {
+      src: "/images/platformer/sprites/mario.png",
+      width: 256,
+      height: 256,
+      w: { row: 10, frames: 15 },
+      wa: { row: 11, frames: 15 },
+      wd: { row: 10, frames: 15 },
+      a: { row: 3, frames: 7, idleFrame: { column: 7, frames: 0 } },
+      s: {  },
+      d: { row: 2, frames: 7, idleFrame: { column: 7, frames: 0 } }
+    },
+    monkey: {
+      src: "/images/platformer/sprites/monkey.png",
+      width: 40,
+      height: 40,
+      w: { row: 9, frames: 15 },
+      wa: { row: 9, frames: 15 },
+      wd: { row: 9, frames: 15 },
+      a: { row: 1, frames: 15, idleFrame: { column: 7, frames: 0 } },
+      s: { row: 12, frames: 15 },
+      d: { row: 0, frames: 15, idleFrame: { column: 7, frames: 0 } }
+    }
+  },
+  enemies: {
+    goomba: {
+      src: "/images/platformer/sprites/goomba.png",
+      width: 448,
+      height: 452,
+    }
+  }
+};
 
     // add File to assets, ensure valid site.baseurl
     Object.keys(assets).forEach(category => {
       Object.keys(assets[category]).forEach(assetName => {
-        assets[category][assetName]['file'] = "/trimester2" + assets[category][assetName].src;
+        assets[category][assetName]['file'] = "/testing" + assets[category][assetName].src;
       });
     });
 
@@ -240,13 +265,36 @@ window.onload = wrap_img;
      * c.) the home advances to 1st game level when button selection is made
     */
     // Start/Home screens
-    new GameLevel( {tag: "start", callback: startGameCallback } );
-    new GameLevel( {tag: "home", background: assets.backgrounds.start, callback: homeScreenCallback } );
+    new GameLevel( {tag: "start", 
+      callback: startGameCallback 
+      });
+    new GameLevel( {tag: "home", 
+      background: assets.backgrounds.start, 
+      callback: homeScreenCallback 
+    });
     // Game screens
-    new GameLevel( {tag: "hills", background: assets.backgrounds.hills, platform: assets.platforms.grass, platformO: assets.platformO.grass, player: assets.players.mario, tube: assets.obstacles.tube, callback: testerCallBack, thing: assets.thing.coin, } );
-    new GameLevel( {tag: "alien", background: assets.backgrounds.planet, platform: assets.platforms.alien, player: assets.players.monkey, callback: testerCallBack } );
+    new GameLevel( {tag: "hills", 
+      background: assets.backgrounds.hills,
+      background2: assets.backgrounds.mountains,
+      platform: assets.platforms.grass, 
+      platformO: assets.platformO.grass, 
+      player: assets.players.mario, 
+      enemy: assets.enemies.goomba, 
+      tube: assets.obstacles.tube, 
+      callback: testerCallBack, 
+      thing: assets.thing.coin,
+    });
+    new GameLevel( {tag: "alien", 
+      background: assets.backgrounds.planet, 
+      platform: assets.platforms.alien, 
+      player: assets.players.monkey, 
+      callback: testerCallBack 
+    });
     // Game Over screen
-    new GameLevel( {tag: "end", background: assets.backgrounds.end, callback: gameOverCallBack } );
+    new GameLevel( {tag: "end", 
+      background: assets.backgrounds.end, 
+      callback: gameOverCallBack 
+    });
 
     /*  ==========================================
      *  ========== Game Control ==================
@@ -265,16 +313,16 @@ window.onload = wrap_img;
 
       </div>
     </main><footer class="site-footer h-card">
-  <data class="u-url" href="/trimester2/"></data>
+  <data class="u-url" href="/testing/"></data>
 
   <div class="wrapper">
 
     <div class="footer-col-wrapper">
       <div class="footer-col">
         <p class="feed-subscribe">
-          <a href="http://localhost:4100/trimester2/feed.xml">
+          <a href="http://localhost:4100/testing/feed.xml">
             <svg class="svg-icon orange">
-              <use xlink:href="/trimester2/assets/minima-social-icons.svg#rss"></use>
+              <use xlink:href="/testing/assets/minima-social-icons.svg#rss"></use>
             </svg><span>Subscribe</span>
           </a>
         </p>
@@ -287,7 +335,7 @@ window.onload = wrap_img;
     <div class="social-links"><ul class="social-media-list"><li>
   <a rel="me" href="https://github.com/ryann96/Team-Project" target="_blank" title="github">
     <svg class="svg-icon grey">
-      <use xlink:href="/trimester2/assets/minima-social-icons.svg#github"></use>
+      <use xlink:href="/testing/assets/minima-social-icons.svg#github"></use>
     </svg>
   </a>
 </li>
