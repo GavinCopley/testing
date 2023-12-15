@@ -181,4 +181,4 @@ image: /images/mario_animation.png
 </script>
 
 ## OOP Mini Project for Trimester 2
-Group Members: Gavin Copley, Ryan Nguyen, Zafeer Ahmed
+By Gavin Copley
