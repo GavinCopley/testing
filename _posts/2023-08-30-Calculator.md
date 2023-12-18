@@ -4,8 +4,8 @@ comments: false
 layout: post
 title: Modified Calculator
 description: Modified grab of the Calculator from APCSA repo.
-type: tangibles
-courses: { compsci: {week: 4} }
+type: devops
+courses: { csse: {week: 4} }
 ---
 
 <style>

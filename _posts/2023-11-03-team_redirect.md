@@ -3,8 +3,8 @@ toc: false
 layout: post
 title: Project Final-Team
 description: Team
-courses: { compsci: {week: 11} }
-type: hacks
+courses: { csse: {week: 11} }
+type: ccc
 ---
 
 <script>

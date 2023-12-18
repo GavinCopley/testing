@@ -4,8 +4,8 @@ comments: true
 layout: post
 title: Daily Plan Week 0
 description: This shows planning and notes from week 0.
-type: plans
-courses: { compsci: {week: 0} }
+type: collab
+courses: { csse: {week: 0} }
 ---
 
 ### PBL Unit 1 / Week 0

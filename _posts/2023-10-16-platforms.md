@@ -4,8 +4,8 @@ comments: false
 layout: base
 title: Platforms
 description: PLatforms
-type: tangibles
-courses: { compsci: {week: 3} }
+type: devops
+courses: { csse: {week: 3} }
 ---
 
 <html>

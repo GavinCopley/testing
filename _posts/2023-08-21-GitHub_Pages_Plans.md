@@ -4,8 +4,8 @@ comments: false
 layout: post
 title: Daily Plan Week 1
 description: Analyze hacks and plan.
-type: plans
-courses: { compsci: {week: 1} }
+type: collab
+courses: { csse: {week: 1} }
 ---
 
 ### PBL Unit 1 / Week 1

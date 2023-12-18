@@ -4,8 +4,8 @@ comments: false
 layout: post
 title: Snake Game
 description: This is the snake game from week 2
-type: hacks
-courses: { compsci: {week: 2} }
+type: ccc
+courses: { csse: {week: 2} }
 ---
 <style>
 

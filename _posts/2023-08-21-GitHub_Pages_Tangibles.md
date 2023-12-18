@@ -4,8 +4,8 @@ comments: true
 layout: post
 title: Review Ticket Week 1
 description: This will help us communicate results.
-type: tangibles
-courses: { compsci: {week: 1} }
+type: devops
+courses: { csse: {week: 1} }
 ---
 
 ### Summary of Accomplishments
