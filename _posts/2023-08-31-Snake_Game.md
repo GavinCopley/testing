@@ -3,9 +3,9 @@ toc: true
 comments: false
 layout: post
 title: Snake Game
-description: This is the snake game from week 2
 type: ccc
 courses: { csse: {week: 2} }
+permalink: /games/snake
 ---
 <style>
 

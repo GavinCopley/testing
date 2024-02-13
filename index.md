@@ -1,9 +1,16 @@
 ---
-layout: home
+layout: base
 search_exclude: true
 image: /images/mario_animation.png
 ---
-{% include nav_front.html %}
+Made by Gavin Copley
+## Welcome!
+
+Use the navigation bar at the top to navigate across the website, or use the images/table below to view the games!
+
+
+
+{% include nav_game.html %}
 
 {% assign sprite_file = site.baseurl | append: page.image %}  <!--- Liquid concatentation --->
 {% assign hash = site.data.mario_metadata %}  <!--- Liquid list variable created from file containing mario metatdata for sprite --->
@@ -179,6 +186,3 @@ image: /images/mario_animation.png
   });
 
 </script>
-
-## OOP Mini Project for Trimester 2
-By Gavin Copley

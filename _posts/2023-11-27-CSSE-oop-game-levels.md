@@ -5,7 +5,7 @@ description: Early steps in adding levels to an OOP Game.  This includes basic a
 type: ccc
 courses: { csse: {week: 14}, csp: {week: 14}, csa: {week: 14} }
 image: /images/platformer/backgrounds/hills.png
-permalink: /mariogame
+permalink: /games/platformer1
 ---
 
 <style>

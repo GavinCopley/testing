@@ -6,6 +6,7 @@ title: Modified Calculator
 description: Modified grab of the Calculator from APCSA repo.
 type: devops
 courses: { csse: {week: 4} }
+permalink: /games/calculator
 ---
 
 <style>
