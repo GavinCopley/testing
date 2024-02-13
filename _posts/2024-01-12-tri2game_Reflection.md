@@ -33,4 +33,5 @@ View <a href="https://github.com/GavinCopley/testing/issues/2">this issue</a> to
 This class was extremely fun, but at the same time it was really useful
 - This class taught me how to work with a large group, something that is applied in the real world. Whether it be a 9-5 or important corporate job, working with other people is something that I will need to know how to do
 - A big lesson from this was communication. At the start, communication was very lack luster and not much connection between the groups was happening. But this is something that we have worked on together and something that applies to whatever profession all of us end up choosing. Communication is big in work, as well as personal endeavors
+<br>
 This class has taught me a lot and has given me the opportunity to do something most other classes would never have. It taught me communication, how to work in a large group, and the importance of teamwork. Thank you Mr Mortensen.
