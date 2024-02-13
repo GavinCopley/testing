@@ -6,6 +6,7 @@ description: This is a reflection of all of the projects I had, what I learned, 
 courses: { csse: {week: 21} }
 type: collab
 permalink: /games/reflection
+hide: true
 ---
 
 ## Overview

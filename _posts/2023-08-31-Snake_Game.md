@@ -6,6 +6,8 @@ title: Snake Game
 type: collab
 courses: { csse: {week: 21} }
 permalink: /games/snake
+image: /images/snake_image.png
+description: This game is a regular snake game. I fully customized the colors and all visual aspects to do with this game. The actual code was provided to me, but this was one of my very first projects that I worked on, so it makes sense that I didn't do all the work :)
 ---
 <style>
 

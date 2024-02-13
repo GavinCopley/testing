@@ -7,6 +7,7 @@ description: Modified grab of the Calculator from APCSA repo.
 type: collab
 courses: { csse: {week: 21} }
 permalink: /games/calculator
+image: /images/calculator_image.png
 ---
 
 <style>
