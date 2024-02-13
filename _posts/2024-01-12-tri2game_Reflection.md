@@ -28,3 +28,9 @@ This was a project that involved a team of me and 2 other people, Zafeer and Rya
 
 ## <a href="https://gavincopley.github.io/testing/">Platformer 2.0(WIP)</a>
 View <a href="https://github.com/GavinCopley/testing/issues/2">this issue</a> to see all that I have accomplished. This was the most fun project of computer science so far. I got assigned to the team in which we help integrate features of other teams will also coding our own additions into the game. I helped people like Zafeer and Ryan (from my previous group) in helping with their code (mostly Zafeer). This was an extremely fun project due to the challenges we faced and the way we had to work together to solve problems. As of writing this, we are not completely done, but I believe it is safe to say that this is one of the best classes in all of Del Norte.
+
+## In Conclusion
+This class was extremely fun, but at the same time it was really useful
+- This class taught me how to work with a large group, something that is applied in the real world. Whether it be a 9-5 or important corporate job, working with other people is something that I will need to know how to do
+- A big lesson from this was communication. At the start, communication was very lack luster and not much connection between the groups was happening. But this is something that we have worked on together and something that applies to whatever profession all of us end up choosing. Communication is big in work, as well as personal endeavors
+This class has taught me a lot and has given me the opportunity to do something most other classes would never have. It taught me communication, how to work in a large group, and the importance of teamwork. Thank you Mr Mortensen.
