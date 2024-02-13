@@ -6,6 +6,7 @@ categories: [C5.0, C7.0, C7.6]
 image: /images/mario_animation.png
 courses: { csse: {week: 6} }
 type: ccc
+hide: true
 ---
 
 {% assign sprite_file = site.baseurl | append: page.image %}  <!--- Liquid concatentation --->

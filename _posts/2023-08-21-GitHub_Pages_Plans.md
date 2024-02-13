@@ -6,6 +6,7 @@ title: Daily Plan Week 1
 description: Analyze hacks and plan.
 type: collab
 courses: { csse: {week: 1} }
+hide: true
 ---
 
 ### PBL Unit 1 / Week 1

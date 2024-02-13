@@ -3,8 +3,8 @@ toc: true
 comments: false
 layout: post
 title: Snake Game
-type: ccc
-courses: { csse: {week: 2} }
+type: collab
+courses: { csse: {week: 21} }
 permalink: /games/snake
 ---
 <style>

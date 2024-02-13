@@ -5,7 +5,7 @@ layout: post
 title: Platform Game
 description: Game in development
 courses: { csse: {week: 15 } }
-type: ccc
+type: collab
 author: Ryan Nguyen
 ---
 

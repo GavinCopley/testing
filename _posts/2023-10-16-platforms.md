@@ -6,6 +6,7 @@ title: Platforms
 description: PLatforms
 type: devops
 courses: { csse: {week: 3} }
+hide: true
 ---
 
 <html>

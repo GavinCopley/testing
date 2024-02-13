@@ -6,6 +6,7 @@ title: Daily Plan Week 0
 description: This shows planning and notes from week 0.
 type: collab
 courses: { csse: {week: 0} }
+hide: true
 ---
 
 ### PBL Unit 1 / Week 0

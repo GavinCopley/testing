@@ -4,8 +4,8 @@ comments: false
 layout: post
 title: Modified Calculator
 description: Modified grab of the Calculator from APCSA repo.
-type: devops
-courses: { csse: {week: 4} }
+type: collab
+courses: { csse: {week: 21} }
 permalink: /games/calculator
 ---
 

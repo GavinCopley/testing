@@ -6,6 +6,7 @@ title: Review Ticket Week 1
 description: This will help us communicate results.
 type: devops
 courses: { csse: {week: 1} }
+hide: true
 ---
 
 ### Summary of Accomplishments

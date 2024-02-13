@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: home
 search_exclude: true
 image: /images/mario_animation.png
 ---
