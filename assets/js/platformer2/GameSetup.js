@@ -17,6 +17,8 @@ import FlyingGoomba from './FlyingGoomba.js';
 import BlockPlatform from './BlockPlatform.js';
 import Mushroom from './Mushroom.js';
 import Coin from './Coin.js';
+import BackgroundVolcano from './BackgroundVolcano.js';
+import GoombaLava from './GoombaLava.js';
 
 
 /* Coding Style Notes
@@ -170,11 +172,13 @@ const GameSetup = {
       obstacles: {
         tube: { src: "/images/platformer/obstacles/tube.png" },
         coin: { src: "/images/platformer/obstacles/coin.png"},
-        tree: { src: "/images/platformer/obstacles/tree.png"}
+        tree: { src: "/images/platformer/obstacles/tree.png"},
+        volcanoTube: { src: "/images/platformer/obstacles/volcanoTube.png"},
       },
       platforms: {
         grass: { src: "/images/platformer/platforms/grass.png" },
         alien: { src: "/images/platformer/platforms/alien.png" },
+        lava: { src: "/images/platformer/platforms/voflo.png"},
         bricks: { src: "/images/platformer/platforms/brick_wall.png" },
         block: { src: "/images/platformer/platforms/brick_block.png" }, //MAY need 3 new variables: sizeRatio, widthRatio, and heightRatio
         itemBlock: {
@@ -195,6 +199,7 @@ const GameSetup = {
         mountains: { src: "/images/platformer/backgrounds/mountains.jpg" },
         clouds : { src: "/images/platformer/backgrounds/clouds.png"},
         space: { src: "/images/platformer/backgrounds/planet.jpg" },
+        volcano: { src: "/images/platformer/backgrounds/volcano2.png"},
         castles: { src: "/images/platformer/backgrounds/castles.png" },
         loading: { src: "/images/platformer/backgrounds/greenscreen.png" },
         complete: { src: "/images/platformer/backgrounds/OneStar.png" },
@@ -248,6 +253,14 @@ const GameSetup = {
       enemies: {
         goomba: {
           src: "/images/platformer/sprites/goomba.png",
+          width: 448,
+          height: 452,
+          scaleSize: 60,
+          speedRatio: 0.7,
+          xPercentage: 0.6,
+        },
+        goombaLava: {
+          src: "/images/platformer/sprites/GoombaLava.png",
           width: 448,
           height: 452,
           scaleSize: 60,
@@ -417,6 +430,26 @@ const GameSetup = {
         // Space Game Level added to the GameEnv ...
         new GameLevel( {tag: "space", callback: this.playerOffScreenCallBack, objects: spaceGameObjects} );
 
+        const lavaGameObjects = [
+        // GameObject(s), the order is important to z-index...
+        { name: 'avenida', id: 'background', class: Background, data: this.assets.backgrounds.volcano },
+        { name: 'grass', id: 'platform', class: Platform, data: this.assets.platforms.lava },
+        { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.block, xPercentage: 0.2, yPercentage: 0.85 },
+        { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.block, xPercentage: 0.2368, yPercentage: 0.85 },
+        { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.block, xPercentage: 0.5, yPercentage: 0.85 },
+        { name: 'blocks', id: 'jumpPlatform', class: BlockPlatform, data: this.assets.platforms.block, xPercentage: 0.5368, yPercentage: 0.85 },
+        { name: 'goomba', id: 'goomba', class: GoombaLava, data: this.assets.enemies.goombaLava, xPercentage: 0.3, minPosition: 0.05},
+        { name: 'goomba', id: 'goomba', class: GoombaLava, data: this.assets.enemies.goombaLava, xPercentage:  0.5, minPosition: 0.3 },
+        { name: 'goomba', id: 'goomba', class: GoombaLava, data: this.assets.enemies.goombaLava, xPercentage:  0.7, minPosition: 0.5 },
+        { name: 'goomba', id: 'goomba', class: GoombaLava, data: this.assets.enemies.goombaLava, xPercentage:  0.6, minPosition: 0.5 },
+        { name: 'mushroom', id: 'mushroom', class: Mushroom, data: this.assets.enemies.mushroom, xPercentage: 0.09},
+        { name: 'lopez', id: 'player', class: Player, data: this.assets.players.mario },
+        { name: 'tube', id: 'tube', class: Tube, data: this.assets.obstacles.volcanoTube },
+        { name: 'complete', id: 'background', class: BackgroundTransitions,  data: this.assets.backgrounds.complete },
+        ];
+        // Avenida Game Level added to the GameEnv ...
+        new GameLevel( {tag: "lava", callback: this.playerOffScreenCallBack, objects: lavaGameObjects } );
+        
         // Game Over Level definition...
         const endGameObjects = [
         { name:'background', class: Background, id: 'background', data: this.assets.backgrounds.end}
