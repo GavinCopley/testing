@@ -158,9 +158,9 @@ export class GoombaLava extends Character {
     }
 
     JumpingGoomba() { 
-        this.canvas.style.transition = "transform 0.8s";
-        this.canvas.style.transform = "translate(0%, -60px)";
-        setTimeout(this.JumpAnimationD.bind(this), 850);
+        this.canvas.style.transition = "transform 0.2s";
+        this.canvas.style.transform = "translate(0%, -50px)";
+        setTimeout(this.JumpAnimationD.bind(this), 200);
     }
 }
 
