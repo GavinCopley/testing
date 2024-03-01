@@ -8,24 +8,24 @@ hide: true
 ---
 
 ## Extension List
-autoDocstring
-Azure Repos
-Code Spell Checker
-Django
-Draw.io Integration
-Github Repositories
-IntelliCode
-. API Usage
-Jinja
-Jupyter
-. Cell Tags
-. Keymap
-. Notebook Renderers
-. Slide SHow
-Live Share
-Pylance
-Python
-. Environments
-. Extension Pack
-. Indent
-Remote Repositories
+- autoDocstring
+- Azure Repos
+- Code Spell Checker
+- Django
+- Draw.io Integration
+- Github Repositories
+- IntelliCode
+- . API Usage
+- Jinja
+- Jupyter
+- . Cell Tags
+- . Keymap
+- . Notebook Renderers
+- . Slide SHow
+- Live Share
+- Pylance
+- Python
+- . Environments
+- . Extension Pack
+- . Indent
+- Remote Repositories
